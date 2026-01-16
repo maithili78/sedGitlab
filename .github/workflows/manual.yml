@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger SedStart test run
-        uses: sedatart/runlocal@v1
+        uses: sedstart/runlocal@v1
         with:
           api_key: ${{ secrets.API_SEDSTART}}
           project_id: 18
