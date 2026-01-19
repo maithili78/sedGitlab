@@ -11,8 +11,28 @@ jobs:
         run: npm install -g playwright@1.52.0
       - name: Setup Xvfb and dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth
+          apt-get update && apt-get install -y \
+          curl \
+          ca-certificates \
+          xvfb \
+          xauth \
+          libnss3 \
+          libatk-bridge2.0-0 \
+          libgtk-3-0 \
+          libx11-xcb1 \
+          libdrm2 \
+          libgbm1 \
+          libasound2 \
+          libxshmfence1 \
+          libxrandr2 \
+          libxcomposite1 \
+          libxcursor1 \
+          libxi6 \
+          libxtst6 \
+          fonts-liberation \
+          --no-install-recommends && \
+          rm -rf /var/lib/apt/lists/*
+
       - name: Trigger SedStart test run
         uses: sedstart/runlocal@v1
         with:
