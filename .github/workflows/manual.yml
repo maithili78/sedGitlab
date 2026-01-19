@@ -11,7 +11,7 @@ jobs:
         run: npm install -g playwright@1.52.0
       - name: Setup Xvfb and dependencies
         run: |
-          sudo apt-get update && asudo apt-get install -y \
+          sudo apt-get update && sudo apt-get install -y \
           curl \
           ca-certificates \
           xvfb \
