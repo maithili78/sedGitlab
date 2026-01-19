@@ -11,7 +11,7 @@ jobs:
         run: npm install -g playwright@1.52.0
       - name: Setup Xvfb and dependencies
         run: |
-          apt-get update && apt-get install -y \
+          sudo apt-get update && asudo apt-get install -y \
           curl \
           ca-certificates \
           xvfb \
@@ -31,7 +31,7 @@ jobs:
           libxtst6 \
           fonts-liberation \
           --no-install-recommends && \
-          rm -rf /var/lib/apt/lists/*
+          sudo rm -rf /var/lib/apt/lists/*
 
       - name: Trigger SedStart test run
         uses: sedstart/runlocal@v1
