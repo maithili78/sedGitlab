@@ -1,11 +1,11 @@
-name: Sedstart Local Windows
+name: Sedstart Local Macos
 
 on:
   workflow_dispatch:
 
 jobs:
   sedstart-run:
-    runs-on: windows-latest
+    runs-on: macos-15
     steps:
       - name: Install Playwright
         run: npm install -g playwright@1.52.0
