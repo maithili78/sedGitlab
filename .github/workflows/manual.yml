@@ -5,15 +5,15 @@ on:
 
 jobs:
   sedstart-run:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     steps:
       - name: Install Playwright
         run: npm install -g playwright@1.52.0
 
       - name: Trigger SedStart test run
-        uses: sedstart/runlocal@v1
+        uses: sedstart/runcloud@v1
         with:
-          api_key: ${{ secrets.API_SEDSTART }}
+          api_key: \${{ secrets.API_SEDSTART }}
           project_id: 18
           test_id: 74
           profile_id: 36
