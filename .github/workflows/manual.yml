@@ -18,3 +18,4 @@ jobs:
           test_id: 74
           profile_id: 36
           headless: false
+          browser: chrome 
