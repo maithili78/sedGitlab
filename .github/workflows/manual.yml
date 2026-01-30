@@ -13,9 +13,10 @@ jobs:
       - name: Trigger SedStart test run
         uses: sedstart/runcloud@v1
         with:
-          api_key: \${{ secrets.API_SEDSTART }}
-          project_id: 18
-          test_id: 74
-          profile_id: 36
+          api_key: ${{ secrets.API_SEDSTART }}
+          project_id: 459
+          test_id: 2136
+          profile_id: 945
           headless: false
           browser: chrome 
+          enviroment: QA
