@@ -19,4 +19,4 @@ jobs:
           profile_id: 945
           headless: false
           browser: chrome 
-          enviroment: QA
+          environment: QA
